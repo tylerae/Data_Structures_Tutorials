@@ -2,7 +2,7 @@
 
 ## Review Stack 
 
-As you already know, a stack is a type of data structure where the elements are catergolrized as "Last in, First Out." Contrary to this is a queue. It is a data structure catagorized as "first in first out." 
+As you already know, a stack is a type of data structure where the elements are catergolrized as "Last in, First Out." Opposite to this, is a queue. It is a data structure catagorized as "first in first out." 
 
 ## What is a Queue exactly?
 
@@ -16,7 +16,13 @@ value = my_queue[0] // del my_queue[0] - Use these to lines of code to delete an
 length = len(my_queue) - check the length of a queue 
 if len(my_queue) == 0: - check if queue is zero 
 
-## 
+```python 
+
+py = x 
+
+for x in x 
+
+```
 
 
 
