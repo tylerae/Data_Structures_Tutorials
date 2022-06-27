@@ -16,11 +16,12 @@ value = my_queue[0] // del my_queue[0] - Use these to lines of code to delete an
 length = len(my_queue) - check the length of a queue 
 if len(my_queue) == 0: - check if queue is zero 
 
+## Example 
+Lets look at a very simple example of using Queues 
+
 ```python 
-
-py = x 
-
-for x in x 
+def orders_in():
+  
 
 ```
 
