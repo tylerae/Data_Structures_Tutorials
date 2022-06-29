@@ -20,7 +20,59 @@ if len(my_queue) == 0: - check if queue is zero
 Lets look at a very simple example of using Queues 
 
 ```python 
-def orders_in():
+
+class TakeOrder:
+
+    def __init__(self, order, price, customer):
+    """
+    We declare the objects that will go into the Queue and the methods will print them out.
+    """
+        self.order = order
+        self.price = price
+        self.customer = customer
+
+    def display(self):
+        print("{} - {} for {}." 
+            .format(self.customer, self.price, self.order))
+
+    def orders(self):
+        self.display()
+        print("Order(s) for customer(s)")
+
+def main():
+"""
+The employee will have the option to take more orders or make the orders in the queue
+"""
+    selection = None
+    resturant_queue = []
+    while (selection != "3"):
+        print()
+        print("Items in resturant queue: {}" .format(len(resturant_queue)))
+        print("Queue: {}" .format(resturant_queue))
+        print("Options:")
+        print("1. Add a new order to make")
+        print("2. Make next Order")
+        print("3. Quit")
+        selection = input("Enter selection: ")
+        print()
+        if selection == "1":
+            order = input("Food Order: ")
+            price = input("Price: ")
+            customer = input("Customer Name: ")
+            task = TakeOrder(order, price, customer)
+            print(f"appending task {task}")
+            #add the objects to the queue with append 
+            resturant_queue.append(task)
+        elif selection == "2":
+        # The orders are made and removed from the queue 
+          if len(resturant_queue) > 0:
+            item = resturant_queue[0]
+            del resturant_queue[0]
+            item.orders()
+    print("Goodbye")
+
+if __name__ == "__main__":
+    main()
   
 
 ```
