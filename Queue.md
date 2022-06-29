@@ -17,7 +17,7 @@ length = len(my_queue) - check the length of a queue
 if len(my_queue) == 0: - check if queue is zero 
 
 ## Example 
-Lets look at a very simple example of using Queues 
+Lets look at an example of a queue for the resturant:
 
 ```python 
 
@@ -76,6 +76,10 @@ if __name__ == "__main__":
   
 
 ```
+
+## Task for you to Solve 
+
+
 
 
 
