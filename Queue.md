@@ -16,8 +16,14 @@ value = my_queue[0] // del my_queue[0] - Use these to lines of code to delete an
 length = len(my_queue) - check the length of a queue 
 if len(my_queue) == 0: - check if queue is zero 
 
+So what is the Big O Notation?
+
+When using Queue and Dequeue, you are dealing with a Big O of "O(n)"
+However, if you decide to work with linked list, you might see a Big O of "O(1)"
+
 ## Example 
 Lets look at an example of a queue for the resturant:
+Note: We solve the problem in line 71-77. See the comments to better understand the purpose. 
 
 ```python 
 
@@ -79,7 +85,50 @@ if __name__ == "__main__":
 
 ## Task for you to Solve 
 
+Read the comments to see what you will do to design and solve your own queue function
 
+```python 
+class YourClass:
+
+    def __init__(self, replace_this , replace_this2):
+        # TODO
+        #declare two objects below and in the init parameters 
+        pass
+
+    def display(self):
+        print("{} - {} for {}." 
+            .format(self.replace_this, self.replace_this2))
+            #change the parameters above too 
+
+    def orders(self):
+        self.display()
+
+def main():
+    selection = None
+    your_queue = []
+    while (selection != "3"):
+        print()
+        print("Items in queue: {}" .format(len(your_queue))) #Number of items with Len 
+        print("Queue: {}" .format(your_queue)) #print your current queue
+        print("Options:")
+        print("1. Add to Queue")
+        print("2. Dequeue")
+        print("3. Quit")
+        selection = input("Enter option: ")
+        print()
+        if selection == "1":
+            # TODO 
+            # Add your options for input, call the class with objects, and add to queue 
+            pass
+            
+        elif selection == "2":
+            # TODO 
+            # Add your Dequeue Code here 
+            pass
+
+if __name__ == "__main__":
+    main()
+```
 
 
 
