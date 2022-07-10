@@ -10,9 +10,7 @@
 * Problem to Solve
 ## III. Linked List
 * Introduction
-* Lists and sets
-* Dequeues and lists 
-* signle and double linked list 
+* Iterating Through Linked Lists
 * Example
 * Problem to Solve
 ## IV. Tree
