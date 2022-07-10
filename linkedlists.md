@@ -1,25 +1,33 @@
-# Queue 
+# Linked Lists
 
-## Review Stack 
+## Introduction 
 
-As you already know, a stack is a type of data structure where the elements are catergolrized as "Last in, First Out." Opposite to this, is a queue. It is a data structure catagorized as "first in first out." 
+A linked list in Python is a linear data structure, in which the element is not stored at contiguous memory locations.
+Each data element is connected to another data element in form of a pointer.
+Linked lists consist of the node where each node has a data field and a link to the next node.
+The first node is called the head, and it is the starting point of iteration through a list.
+The last node has its next reference pointing to none which means it is the end of the list.
+Python does not have linked lists in its standard library.
 
-## What is a Queue exactly?
+![image](https://user-images.githubusercontent.com/84347788/178126982-82f1d340-752f-474c-bd2d-39a6b8d818b3.png)
 
-Lets think of a resturant. You make an order and it goes into an order queue. Other people have made orders before you and there are some people who made orders after. 
-Luckily, the queue ensures that your food is made in the order it came in. After all, there is nothing more fustrating than seeing people who ordered after you get their food first. 
 
-Lets review some syntax. These are the buiding blocks for a queue 
+Review here for more info:
+source - https://pythonguides.com/linked-lists-in-python/#:~:text=1%20A%20linked%20list%20in%20Python%20is%20a,not%20have%20linked%20lists%20in%20its%20standard%20library.
 
-my_queue.append(value) - Add and element to your queue 
-value = my_queue[0] // del my_queue[0] - Use these to lines of code to delete an item from the queue. (I.E. Dequeue)
-length = len(my_queue) - check the length of a queue 
-if len(my_queue) == 0: - check if queue is zero 
+## How do we work with Linked Lists?
+
+
 
 So what is the Big O Notation?
 
 When using Queue and Dequeue, you are dealing with a Big O of "O(n)"
 However, if you decide to work with linked list, you might see a Big O of "O(1)"
+
+
+
+
+
 
 ## Example 
 Lets look at an example of a queue for the resturant:
