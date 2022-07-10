@@ -17,16 +17,28 @@ source - https://pythonguides.com/linked-lists-in-python/#:~:text=1%20A%20linked
 
 ## How do we work with Linked Lists?
 
+#### Lets start with creating a linked list 
+
+Create a new node (we will call it new_node)
+
+Set the "next" of the new node to the current head (new_node.next = self.head)
+
+Set the "prev" of the current head to the new node (self.head.prev = new_node)
+
+Set the head equal to the new node (self.head = new_node)
+
+#### How to iterate through?
+
+Set the prev of the node after current to the node before current (current.next.prev = current.prev)
+
+Set the next of the node before current to the node after current (current.prev.next = current.next)
 
 
-So what is the Big O Notation?
+##So what is the Big O Notation?
 
-When using Queue and Dequeue, you are dealing with a Big O of "O(n)"
-However, if you decide to work with linked list, you might see a Big O of "O(1)"
-
-
-
-
+At Head: O(1)
+At Tail: O(n)
+Geting elements: O(n)
 
 
 ## Example 
@@ -35,65 +47,169 @@ Note: We solve the problem in line 71-77. See the comments to better understand 
 
 ```python 
 
-class TakeOrder:
 
-    def __init__(self, order, price, customer):
+class LinkedList:
     """
-    We declare the objects that will go into the Queue and the methods will print them out.
+    Implement the LinkedList data structure.  The Node class below is an 
+    inner class.  An inner class means that its real name is related to 
+    the outer class.  To create a Node object, we will need to 
+    specify LinkedList.Node
     """
-        self.order = order
-        self.price = price
-        self.customer = customer
 
-    def display(self):
-        print("{} - {} for {}." 
-            .format(self.customer, self.price, self.order))
+    class Node:
+        """
+        Each node of the linked list will have data and links to the 
+        previous and next node. 
+        """
 
-    def orders(self):
-        self.display()
-        print("Order(s) for customer(s)")
+        def __init__(self, data):
+            """ 
+            Initialize the node to the data provided.  Initially
+            the links are unknown so they are set to None.
+            """
+            self.data = data
+            self.next = None
+            self.prev = None
 
-def main():
-"""
-The employee will have the option to take more orders or make the orders in the queue
-"""
-    selection = None
-    resturant_queue = []
-    while (selection != "3"):
-        print()
-        print("Items in resturant queue: {}" .format(len(resturant_queue)))
-        print("Queue: {}" .format(resturant_queue))
-        print("Options:")
-        print("1. Add a new order to make")
-        print("2. Make next Order")
-        print("3. Quit")
-        selection = input("Enter selection: ")
-        print()
-        if selection == "1":
-            order = input("Food Order: ")
-            price = input("Price: ")
-            customer = input("Customer Name: ")
-            task = TakeOrder(order, price, customer)
-            print(f"appending task {task}")
-            #add the objects to the queue with append 
-            resturant_queue.append(task)
-        elif selection == "2":
-        # The orders are made and removed from the queue 
-          if len(resturant_queue) > 0:
-            item = resturant_queue[0]
-            del resturant_queue[0]
-            item.orders()
-    print("Goodbye")
+    def __init__(self):
+        """
+        Initialize an empty linked list.
+        """
+        self.head = None
+        self.tail = None
 
-if __name__ == "__main__":
-    main()
+    def insert_head(self, value):
+        """
+        Insert a new node at the front (i.e. the head) of the
+        linked list.
+        """
+        # Create the new node
+        new_node = LinkedList.Node(value)  
+        
+        # If the list is empty, then point both head and tail
+        # to the new node.
+        if self.head is None:
+            pass
+        # If the list is not empty, then only self.head will be
+        # affected.
+        else:
+            pass
+            # Connect new node to the previous head
+            # Connect the previous head to the new node
+            # Update the head to point to the new node
+
+    def remove_head(self):
+        """ 
+        Remove the first node (i.e. the head) of the linked list.
+        """
+        # If the list has only one item in it, then set head and tail 
+        # to None resulting in an empty list.
+        if self.head == self.tail:
+            pass
+        # If the list has more than one item in it, then only self.head
+        # will be affected.
+        elif self.head is not None:
+            pass
+            # Disconnect the second node from the first node
+            # Update the head to point to the second node
+
+    def insert_after(self, value, new_value):
+        """
+        Insert 'new_value' after the first occurance of 'value' in
+        the linked list.
+        """
+        # Search for the node that matches 'value' by starting at the 
+        # head of the list.
+        curr = self.head
+        while curr is not None:
+            if curr.data == value:
+                # If the location of 'value' is at the end of the list,
+                # then we will affect the self.tail.
+                if curr == self.tail:
+                    new_node = LinkedList.Node(new_value)
+                    # Connect the new node to the current tail
+
+                    # Connect the current tail to the new node
+
+                    # Set the tail to the new node
+
+                # For any other location of 'value', need to create a 
+                # new node and reconenct the links to insert.
+                else:
+                    new_node = LinkedList.Node(new_value)
+                    # Connect new node to the node containing 'value'
+                    
+                    # Connect new node to the node after 'value'
+
+                    # Connect node after 'value' to the new node
+
+                    # Connect the node containing 'value' to the new node
+
+                return # We can exit the function after we insert
+            curr = curr.next # Go to the next node to search for 'value'
+
+    def __iter__(self):
+        """
+        Iterate foward through the Linked List
+        """
+        curr = self.head  # Start at the begining since this is a forward iteration.
+
+
+    def __str__(self):
+        """
+        Return a string representation of the linked list.
+        """
+        output = "linkedlist["
+        first = True
+        curr = self.head
+        while curr is not None:
+            if first:
+                first = False
+            else:
+                output += ", "
+            output += str(curr.data)
+            curr = curr.next
+        output += "]"
+        return output
+
+    
+# Create Empty Linked List
+numbers = LinkedList()
+print("Empty Linked List: {}\n".format(numbers))
+
+# Insert 6 numbers including a duplicated value
+numbers.insert_head(1)
+numbers.insert_head(2)
+numbers.insert_head(2)
+numbers.insert_head(3)
+numbers.insert_head(4)
+numbers.insert_head(5)
+print("Inserting 6 numbers: {}\n".format(numbers))
+
+# Remove the head
+numbers.remove_head()
+print("Removing the head: {}\n".format(numbers))
+
+# Insert after the value 3 and the value 5
+numbers.insert_after(3, 3.5)
+numbers.insert_after(1, 6)
+print("Inserting numbers after after the value 3 and the value 1: {}\n".format(numbers))
+
+# Use the iterator to display each value
+print("Using iterator to display all numbers:")
+for x in numbers:
+    print(x)
+print()
+
+# Use the iterator to calculate the sum of all the numbers
+print("Sum of all numbers: {}\n".format(sum(numbers)))
   
 
 ```
 
 ## Task for you to Solve 
 
-Follow the link, Read the comments to see what you will do to design and solve your own queue program.
+Follow the link, Read the comments to see what you will do to design and solve your own linked list program.
 There is a main file, which you will complete, and an answer file for when youre complete.
 
 https://replit.com/@TylerElms/Queue-tutorial?v=1
