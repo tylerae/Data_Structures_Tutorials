@@ -27,23 +27,24 @@ Set the "prev" of the current head to the new node (self.head.prev = new_node)
 
 Set the head equal to the new node (self.head = new_node)
 
+
+
+
+
+
+
+
+
+
+
+
 #### How to iterate through?
 
 Set the prev of the node after current to the node before current (current.next.prev = current.prev)
 
 Set the next of the node before current to the node after current (current.prev.next = current.next)
 
-
-##So what is the Big O Notation?
-
-At Head: O(1)
-At Tail: O(n)
-Geting elements: O(n)
-
-
-## Example 
-Lets take a look at a simple program that shows the different waork with a linked list! In the practice problem later on we will move onto adding and removing elements that arent just at the end of the linked list, but for now, lets just get a basic understanding. 
-Think: Following the example, how would you add more days to the linked list? 
+Check out this example:
 
 ```python 
 class Node:
@@ -55,7 +56,7 @@ class LinkedList:
    def __init__(self):
       self.head = None
 
-    # this will print our values 
+   # this will print our values 
    def listprint(self):
       printvalue = self.head
       while printvalue is not None:
@@ -76,6 +77,13 @@ e2.next = e3
 list.listprint()
 
 ```
+
+
+##So what is the Big O Notation?
+
+At Head: O(1)
+At Tail: O(n)
+Geting elements: O(n)
 
 ## Task for you to Solve 
 
