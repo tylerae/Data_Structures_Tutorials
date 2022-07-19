@@ -23,6 +23,8 @@
 * Introduction
 * Creating a Root
 * Example 
+* Creating the nodes
+* Example
 * Methods for navigating
 * Example
 * Problem to Solve
