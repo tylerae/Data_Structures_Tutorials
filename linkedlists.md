@@ -11,10 +11,6 @@ Python does not have linked lists in its standard library.
 
 ![image](https://user-images.githubusercontent.com/84347788/179636679-f96d0ea4-ca99-4035-a125-8eb5f160a812.png)
 
-
-![image](https://user-images.githubusercontent.com/84347788/178126982-82f1d340-752f-474c-bd2d-39a6b8d818b3.png)
-
-
 Review here for more info:
 https://pythonguides.com/linked-lists-in-python/#:~:text=1%20A%20linked%20list%20in%20Python%20is%20a,not%20have%20linked%20lists%20in%20its%20standard%20library.
 
@@ -28,6 +24,8 @@ Set the "next" of the new node to the current head (new_node.next = self.head)
 Set the "prev" of the current head to the new node (self.head.prev = new_node)
 
 Set the head equal to the new node (self.head = new_node)
+
+![image](https://user-images.githubusercontent.com/84347788/178126982-82f1d340-752f-474c-bd2d-39a6b8d818b3.png)
 
 #### Example
 
@@ -91,7 +89,6 @@ list.AtEnd("Thu")
 
 list.listprint()
 
-
 ```
 
 #### How to iterate through?
@@ -149,10 +146,61 @@ Set the head to be the second node (self.head = self.head.next)
 
 ```python
 
+class Node:
+   def __init__(self, data=None):
+     #start with our data and the next element
+      self.data = data
+      self.next = None
+     
+class SLinkedList:
+  def __init__(self):
+    self.head = None
+
+    #creating our linked list 
+  def begining(self, data_in):
+    NewNode = Node(data_in)
+    NewNode.next = self.head
+    self.head = NewNode
+
+# We will work on removing elements here 
+  def RemoveNode(self, Removekey):
+    HeadVal = self.head
+         
+    if (HeadVal is not None):
+      if (HeadVal.data == Removekey):
+        self.head = HeadVal.next
+        HeadVal = None
+        return
+    while (HeadVal is not None):
+      if HeadVal.data == Removekey:
+        break
+      prev = HeadVal
+      HeadVal = HeadVal.next
+
+    if (HeadVal == None):
+      return
+
+    prev.next = HeadVal.next
+    HeadVal = None
+
+  #this is our print function - Notice how it starts with the head
+  def LListprint(self):
+    printvalue = self.head
+    while (printvalue):
+      print(printvalue.data),
+      printvalue = printvalue.next
+
+llist = SLinkedList()
+llist.begining("Mon")
+llist.begining("Tue")
+llist.begining("Wed")
+llist.begining("Thu")
+llist.RemoveNode("Tue")
+
+#call the print function 
+llist.LListprint()
+
 ```
-
-
-
 
 ## So what is the Big O Notation?
 
