@@ -9,15 +9,17 @@ The first node is called the head, and it is the starting point of iteration thr
 The last node has its next reference pointing to none which means it is the end of the list.
 Python does not have linked lists in its standard library.
 
+![image](https://user-images.githubusercontent.com/84347788/179636679-f96d0ea4-ca99-4035-a125-8eb5f160a812.png)
+
+
 ![image](https://user-images.githubusercontent.com/84347788/178126982-82f1d340-752f-474c-bd2d-39a6b8d818b3.png)
 
 
 Review here for more info:
 https://pythonguides.com/linked-lists-in-python/#:~:text=1%20A%20linked%20list%20in%20Python%20is%20a,not%20have%20linked%20lists%20in%20its%20standard%20library.
 
-## How do we work with Linked Lists?
 
-#### Lets start with creating a linked list, specifically, adding elements!
+## Lets start with creating a linked list, specifically, adding elements!
 
 Create a new node (we will call it new_node)
 
@@ -140,6 +142,9 @@ Set the "prev" of the second node (self.head.next) to nothing (self.head.next.pr
 
 Set the head to be the second node (self.head = self.head.next)
 
+![image](https://user-images.githubusercontent.com/84347788/179636623-6566ead2-e010-4ea6-ac93-839ab8621e73.png)
+
+
 #### Example 
 
 ```python
@@ -149,7 +154,7 @@ Set the head to be the second node (self.head = self.head.next)
 
 
 
-##So what is the Big O Notation?
+## So what is the Big O Notation?
 
 At Head: O(1)
 At Tail: O(n)
