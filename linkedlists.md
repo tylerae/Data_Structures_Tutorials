@@ -29,7 +29,7 @@ Set the head equal to the new node (self.head = new_node)
 
 #### Example
 
-`` python
+``` python
 class Node:
    def __init__(self, dataval=None):
       self.dataval = dataval
@@ -47,8 +47,8 @@ class SLinkedList:
       while(laste.nextval):
          laste = laste.nextval
       laste.nextval=NewNode
-  
-  """
+ 
+ """ Comment Begin
       #If you wanted to add to the begining use this function 
       
       def AtBegining(self,newdata):
@@ -68,7 +68,8 @@ class SLinkedList:
       middle_node.nextval = NewNode
 
       #Just make sure to call them respectively 
-  """ 
+      
+""" Comment End
     
 # Print the linked list
    def listprint(self):
