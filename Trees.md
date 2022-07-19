@@ -138,6 +138,14 @@ print(root.inorderTraversal(root))
 
 ```
 
+## Big O Notation 
+
+* Space Complexity: O(n)
+* Access: O(n)
+* Search: O(n)
+* Insertion: O(n)
+* Deletion: O(n)
+
 ## Problem to Solve 
 You know the drill! If you get stick or want to check your answer there is an answer file. Remember, this practice is just meant to start you building binary trees.
 
