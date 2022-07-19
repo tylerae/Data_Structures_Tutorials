@@ -21,9 +21,8 @@
 * Problem to Solve
 ## IV. Tree
 * Introduction
-* Nodes
-* types of tress
-* methods for navigating
-* creating a tree
+* Creating a Root
+* Example 
+* Methods for navigating
 * Example
 * Problem to Solve
