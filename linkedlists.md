@@ -69,7 +69,7 @@ class SLinkedList:
 
       #Just make sure to call them respectively 
       
-""" Comment End
+Comment End """
     
 # Print the linked list
    def listprint(self):
@@ -92,7 +92,7 @@ list.listprint()
 
 ```
 
-#### How to iterate through?
+## How to iterate through?
 
 Set the prev of the node after current to the node before current (current.next.prev = current.prev)
 
