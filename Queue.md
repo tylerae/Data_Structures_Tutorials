@@ -9,6 +9,9 @@ As you already know, a stack is a type of data structure where the elements are 
 Lets think of a resturant. You make an order and it goes into an order queue. Other people have made orders before you and there are some people who made orders after. 
 Luckily, the queue ensures that your food is made in the order it came in. After all, there is nothing more fustrating than seeing people who ordered after you get their food first. 
 
+![image](https://user-images.githubusercontent.com/84347788/179652288-6566a48b-b730-4e38-81c9-5743e89cbfe7.png)
+
+
 Lets review some syntax. These are the buiding blocks for a queue 
 
 my_queue.append(value) - Add and element to your queue 
