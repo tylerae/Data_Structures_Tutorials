@@ -205,13 +205,15 @@ llist.LListprint()
 
 ## So what is the Big O Notation?
 
-At Head: O(1)
-At Tail: O(n)
-Geting elements: O(n)
+* At Head: O(1)
+* At Tail: O(n)
+* Getting elements: O(n)
 
 ## Task for you to Solve 
 
-Follow the link, Read the comments to see what you will do to design and solve your own linked list program. Read the explanation for removing a element if you get stuck. 
+Follow the link, Read the comments to see what you will do to design and solve your own linked list program. We will just do an element remove example as it tends to be where students get stuck. Please review the attached link in the intro for more examples and problems to practice. 
 There is a main file, which you will complete, and an answer file for when youre complete.
+
+https://replit.com/@TylerElms/Linked-Lists-Tutorial?v=1
 
 
