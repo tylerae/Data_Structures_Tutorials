@@ -139,6 +139,8 @@ print(root.inorderTraversal(root))
 ```
 
 ## Problem to Solve 
+You know the drill! If you get stick or want to check your answer there is an answer file. Remember, this practice is just meant to start you building binary trees.
 
+https://replit.com/@TylerElms/Binary-Trees-Tutorial?v=1
 
 
